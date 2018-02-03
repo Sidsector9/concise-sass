@@ -1,0 +1,25 @@
+%super-sub {
+	text-transform: uppercase;
+	font-size: .95rem;
+	letter-spacing: 4px;
+}
+
+.site-header {
+	padding: 1.5rem 0;
+
+	.site-title {
+		text-align: center;
+		font-size: 3rem;
+		color: $red;
+
+		sup {
+			@extend %super-sub;
+			margin-left: 5px;
+		}
+
+		sub {
+			@extend %super-sub;
+			margin-right: 5px;
+		}
+	}
+}

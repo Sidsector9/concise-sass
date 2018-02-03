@@ -1,0 +1,64 @@
+%notify {
+	margin: 1rem;
+	padding: 1rem;
+	border: 2px solid;
+	text-transform: uppercase;
+	font-size: 1rem;
+	letter-spacing: 4px;
+	font-weight: bold;
+
+	@include mobile( $tablet ) {
+		margin: 1rem 0;
+	}
+}
+
+@mixin notify-hover( $color ) {
+	background-color: $color;
+}
+
+@mixin notify( $color ) {
+	border-color: $color;
+	color: $color;
+	
+	&:hover {
+		color: #141414;
+		@include notify-hover( $color );
+	}
+}
+
+.inform {
+	display: flex;
+	width: 100%;
+
+	@include mobile( $tablet ) {
+		display: block;
+	}
+
+	& > div {
+		width: 25%;
+
+		@include mobile( $tablet ) {
+			width: 100%;
+		}
+	}
+}
+
+.success {
+	@extend %notify;
+	@include notify( $green );
+}
+
+.error {
+	@extend %notify;
+	@include notify( $red );
+}
+
+.warning {
+	@extend %notify;
+	@include notify( $orange );
+}
+
+.notice {
+	@extend %notify;
+	@include notify( $blue );
+}

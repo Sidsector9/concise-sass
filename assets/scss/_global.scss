@@ -1,0 +1,13 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	position: relative;
+	margin: 0;
+	padding: 1rem;
+	background-color: $primary-color;
+	color: $grey;
+	font-family: $font;
+	width: 100%;
+}
