@@ -3,6 +3,6 @@
 - Clone the repository
 - cd to `concise-sass` 
 - Run `npm install`
-- Run `gulp`
+- Run `node_modules/.bin/gulp`
 - Open `index.html` in the browser
 
